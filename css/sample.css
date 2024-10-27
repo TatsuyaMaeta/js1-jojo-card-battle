@@ -1,0 +1,267 @@
+body{
+    margin:0;
+    padding:0;
+    /* text-align:left; */
+    font-size: 32px;
+
+}
+header{
+    background-color: rgb(51, 51, 51);
+    /* border-bottom: 1px solid #ccc; */
+    text-align: center;
+    background-image: url(../img/index-bgi/gogogoのコピー.png);
+    background-repeat: repeat;
+    background-position: center;
+    /* background-size: auto; */
+    height: 100px;
+
+}
+h2{
+    margin: 0px auto;
+    padding:15px 0 0;
+    height: 80px;
+}
+
+main{
+    /* border-bottom:1px solid #ccc; */
+    background-color: rgb(58, 58, 58);
+}
+footer{
+    background-color: #fff;
+    border-bottom:1px solid #ccc;
+    text-align: center;
+    font-size: 1rem;
+}
+/* p{
+    font-size:200%;
+    text-align: center;
+    border-bottom:1px solid #fff;
+    height:200px;
+} */
+
+button{
+    list-style-type:none;
+    border: 1px solid #666;
+    background-color: #FFF;
+    display:table-cell;  /* 定義 */
+    cursor: pointer;
+
+    padding: 0;
+    border-top: 1px solid #000000;
+    display:table;  /* 定義 */
+    table-layout: fixed;
+    width: 300px;
+
+    margin: 0 auto;
+
+    /* インラインの文字を中央に寄せる */
+    text-align: center; 
+}
+#omikuji{
+    width: 100%;
+    height: 50px;
+    background-color: aqua;
+    font-size: 1.4rem;
+}
+
+#omikuji:hover{
+    background: #0066CC;
+    color:#fff;
+}
+
+.list-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0 70px;
+}
+.cards{
+    width: 150px;
+    height: 300px;
+    margin: 0 1% ;
+}
+.cards img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.cards:hover{
+    opacity: 0.65;
+    width: 230px;
+    height: 380px;
+
+}
+
+/* 名前が出てくる時のマスクの仕様 */
+.cards .mask {
+	width:			380px;
+	height:			75px;
+	position:		absolute;
+	top:			50;
+	left:			0;
+	opacity:		0;	/* マスクを表示しない */
+	background-color:	rgba(0,0,0,0.4);
+	-webkit-transition:	all 1.5s ease;
+    transition:		all 1.5s ease;
+    color: white;
+}
+.cards:hover .mask {
+	opacity:		1;	/* マスクを表示する */
+	padding-left:		90px;	/* 右にずらす */
+}
+/* 名前が出てくる時のマスクの仕様 */
+
+.stand-name{
+    font-size: 16px;
+}
+
+
+#echo{
+    height: 300px;
+    width: 100%;
+    /* text-align: center; */
+    margin: 70px auto 0px;
+    padding: 0px 0 200px;
+}
+
+
+.teki_img_wrapper{
+    width: 200px;
+    height: 400px;
+
+    /* 画像を画面中央寄席したいときはimgタグの直上のタグでcssを指定 */
+    margin: 0 auto;
+
+}
+.teki_img_wrapper img{
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+
+
+
+
+/* https://blog.raizzenet.com/mouse-hover-caption-effects-in-css/#i-sample13 */
+.teki_detail_wrapper {
+	width:			200px;
+	height:			400px;
+	overflow:		hidden;
+	/* margin:			10px 8px 10px 16px; */
+    position:		relative;
+    margin: 50px auto 0;
+    /* padding: 80px 0 30px; */
+}
+.teki_detail_wrapper .caption {
+	width:			100%;
+	height:			100%;
+	visibility:		hidden;	/* 文字を表示しない */
+	font-size:		80%;
+	position:		absolute;
+	top:			0;
+	left:			0;
+	text-align:		center;
+	-webkit-transition:	all 1.2s step-end;
+	transition:		all 1.2s step-end;
+}
+.teki_detail_wrapper:hover .caption {
+	visibility:		visible;	/* 文字を表示する */
+}
+.teki_detail_wrapper .caption p {
+	font-size:		80%;
+	padding-top:		75px;
+	color:			#fff;
+	opacity:		0;	/* ホバーが解除された時すぐ消えるように、文字を表示しない */
+}
+.teki_detail_wrapper:hover .caption p {
+    opacity:		1;	/* 文字を表示する */
+    margin: 100px 0 0 ;
+}
+.teki_detail_wrapper .mask1, .teki_detail_wrapper .mask2 {
+	width:			50%;	/* 幅は半部のサイズ */
+	height:			100%;
+	position:		absolute;
+	top:			0;
+	background-color:	rgba(0,0,0,0.4);
+	-webkit-transition:	all 1s ease;
+	transition:		all 1s ease;
+}
+.teki_detail_wrapper .mask1 {
+	left:			-50%;	/* 枠の左に置いて表示させない */
+}
+.teki_detail_wrapper:hover .mask1 {
+	left:			0px;	/* 左にずらして表示する */
+}
+.teki_detail_wrapper .mask2 {
+	right:			-50%;	/* 枠の右に置いて表示させない */
+}
+.teki_detail_wrapper:hover .mask2 {
+	right:			0px;	/* 右にずらして表示する */
+}
+
+#dio_text{
+    cursor: pointer;
+}
+
+
+
+
+/* 勝敗結果表示 */
+
+#battle-result {
+	width:			100%;
+	height:			400px;
+	overflow:		hidden;
+	/* margin:			10px 8px 10px 16px; */
+    position:		relative;
+    margin:-230px 0 -250px;
+    padding:-100px 0 250px;
+    z-index: 100;
+    /* display: none; */
+}
+#battle-result .caption {
+	font-size:		130%;
+	color:			#fff;
+	text-align: 		center;
+	padding-top:		80px;
+}
+.result-caption{
+    font-size: 120px;
+    font-weight: bold;
+    margin: 120px 0 0 ;
+}
+.result-mask{
+    margin: 0 auto;
+    text-align: center;
+}
+
+#battle-result .result-mask {
+	width:			100%;
+	height:			100%;
+	position:		absolute;
+	top:			0;
+	left:			0;
+	opacity:		0;	/* 表示させない */
+	background-color:	rgba(0,0,0,0.4);
+	-webkit-transform:	rotateY(-1080deg);
+	transform:		rotateY(-1080deg);
+	-webkit-transition:	all 2s ease;
+	transition:		all 2s ease;
+}
+#battle-result:hover .result-mask {
+	-webkit-transform:	rotateY(0deg);
+	transform:		rotateY(0deg);
+    opacity:		1;	
+    /* ホバーで表示する */
+    
+}
+
+/* 敵カードにマウスを載せたら機能発動 */
+/* .mask1:hover,.mask2:hover{
+    background-color: antiquewhite;
+    
+} */
